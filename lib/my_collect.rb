@@ -1,13 +1,9 @@
-def my_collect(array)
+def my_collect(collection)
   i = 0
-  name_collection = []
-  while i < array.length
-    name_collection.push yield(array[i])
-  # you could also do it this way:
-  # name_collection << yield(array[i])
+  new_collection = []
+  while i < collection.length
+    new_collection << yield(collection[i])
     i += 1
   end
-  name_collection
+  new_collection
 end
-
-my_collect(list) {|i| i.split(" ").first}
