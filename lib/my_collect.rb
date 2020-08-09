@@ -1,15 +1,7 @@
-def my_collect(languages)
-   i = 0
-   while i < languages.length
-   yield(languages[i])
-   i += 1
+def my_collect(collection)
+  collection.each do |languages|
+    languages.upcase
 end
-  languages.upcase
+  collection
 end
-def my_collect(students)
-  i = 0
-  while i < students.length
-    yield(students[i])
-end
-   students.split(" ").first
-end
+
